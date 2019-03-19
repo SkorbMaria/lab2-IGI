@@ -1,0 +1,18 @@
+﻿@model List<lab1_ef.Employee>
+
+<div><img src="~/images/297387149762094.jpg" /></div>
+@using (Html.BeginForm())
+{
+    <h2>EMPLOYEES</h2>
+    <div>
+        <ul>
+            <li><p>ID, Имя</p></li>
+            @foreach (var type in Model)
+            {
+                <li>
+                    <p>@type.EmployeeId, @type.Name</p>
+                </li>
+            }
+        </ul>
+    </div>
+}
